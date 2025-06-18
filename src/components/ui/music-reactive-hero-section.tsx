@@ -523,12 +523,11 @@ export const Component = () => {
           descubre tu verdadero potencial
         </p>
         <h1
-          className="hero-title"
+          className="hero-title text-[2.1rem] leading-tight sm:text-[3.5rem]"
           style={{
             fontFamily: 'Archivo Expanded, Archivo, sans-serif',
             fontWeight: 800,
             color: '#ECE6D8',
-            fontSize: '3.5rem',
             textTransform: 'uppercase',
             marginBottom: '0.3rem',
             lineHeight: 1.1,
@@ -553,7 +552,18 @@ export const Component = () => {
           en alta rehab, tu recuperación es nuestro arte
         </p>
       </div>
-      
+      <style>
+        {`
+          @media (max-width: 640px) {
+            .hero-title {
+              font-size: 2.1rem !important;
+              line-height: 1.05 !important;
+              max-width: 95vw;
+              word-break: break-word;
+            }
+          }
+        `}
+      </style>
       <audio 
         ref={audioRef}
         crossOrigin="anonymous"
